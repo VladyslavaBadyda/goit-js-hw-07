@@ -12,3 +12,30 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* відстань між зображеннями */
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 400px;
+  /* обмежуємо ширину, щоб не розтягувалося на весь екран */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
