@@ -20,7 +20,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  /* відстань між зображеннями */
   justify-content: center;
   padding: 20px;
 }
@@ -28,7 +27,6 @@ body {
 .gallery-image {
   width: 100%;
   max-width: 400px;
-  /* обмежуємо ширину, щоб не розтягувалося на весь екран */
   height: auto;
   display: block;
   border-radius: 8px;

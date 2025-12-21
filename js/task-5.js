@@ -10,13 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const changeButton = document.querySelector("button.change-color");
 
   changeButton.addEventListener("click", () => {
-    // Генеруємо випадковий колір
     const newColor = getRandomHexColor();
 
-    // Змінюємо фон 
     body.style.backgroundColor = newColor;
 
-    // Оновлюємо текст у span.color
     colorSpan.textContent = newColor;
   });
 });
