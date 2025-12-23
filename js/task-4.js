@@ -1,22 +1,31 @@
-form.addEventListener('submit', function(event) {
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.querySelector(".login-form");
+
+  if (!loginForm) {
+    console.error("Форма з класом 'login-form' не знайдена!");
+    return;
+  }
+
+  loginForm.addEventListener("submit", function (event) {
+    // Запобігаємо перезагрузці сторінки
     event.preventDefault();
 
-    const elements = form.elements;
+    const emailValue = loginForm.elements.email.value.trim();
+    const passwordValue = loginForm.elements.password.value.trim();
 
-    const emailValue = elements.email.value.trim();
-    const passwordValue = elements.password.value.trim();
-
-    if (emailValue === '' || passwordValue === '') {
-      alert('All form fields must be filled in');
+    if (emailValue === "" || passwordValue === "") {
+      alert("All form fields must be filled in");
       return;
     }
 
     const formData = {
       email: emailValue,
-      password: passwordValue
+      password: passwordValue,
     };
 
     console.log(formData);
 
-    form.reset();
+    // Очищаємо форму
+    loginForm.reset();
   });
+});
